@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J.P. de Koning Stukadoorsbedrijf — Stucwerk regio Purmerend</title>
+  <meta name="description" content="Professioneel stucwerk en wandafwerking in Noord- en Zuid-Holland en Utrecht. Familiebedrijf sinds 1914. Vraag vrijblijvend een offerte aan — 0299 435 225." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    :root {
+      --ink:      #1C1713;
+      --earth:    #3A302A;
+      --mid:      #7A6E65;
+      --faded:    #A89E95;
+      --rule:     #D8D0C4;
+      --stone:    #C6BAA8;
+      --linen:    #F2EDE3;
+      --cream:    #F8F4EE;
+      --terra:    #9B4F2C;
+      --terra-l:  #F5EAE3;
+
+      --ff-head: 'Cormorant Garamond', Georgia, serif;
+      --ff-body: 'Lora', Georgia, serif;
+
+      --max: 1080px;
+      --pad: clamp(20px, 5vw, 56px);
+    }
+
+    body {
+      font-family: var(--ff-body);
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── TOPBAR ─── */
+    .topbar {
+      background: var(--ink);
+      color: #C0B8AE;
+      font-size: .78rem;
+      letter-spacing: .04em;
+    }
+    .topbar-in {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .topbar a { color: #C0B8AE; transition: color .2s; }
+    .topbar a:hover { color: #fff; }
+    .topbar-left { display: flex; align-items: center; gap: 20px; }
+    .topbar-dot { color: #4A4038; }
+    .topbar-phone { color: #D9A87A !important; font-weight: 500; }
+
+    /* ─── HEADER ─── */
+    .header {
+      background: var(--cream);
+      border-bottom: 1px solid var(--rule);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-in {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .logo-wrap { display: flex; align-items: center; }
+    .logo-wrap img { height: 48px; width: auto; }
+    .header-contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+    }
+    .header-phone {
+      font-family: var(--ff-head);
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--ink);
+      letter-spacing: .01em;
+    }
+    .header-phone:hover { color: var(--terra); }
+    .header-hours {
+      font-size: .72rem;
+      color: var(--mid);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    nav { display: flex; }
+    .nav-list {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+    .nav-list a {
+      display: block;
+      padding: 6px 14px;
+      font-family: var(--ff-body);
+      font-size: .85rem;
+      letter-spacing: .04em;
+      color: var(--mid);
+      transition: color .15s;
+      white-space: nowrap;
+    }
+    .nav-list a:hover,
+    .nav-list a.cur { color: var(--ink); }
+    .nav-list .nav-offerte a {
+      background: var(--terra);
+      color: #fff;
+      padding: 7px 16px;
+      border-radius: 2px;
+      margin-left: 8px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-size: .72rem;
+      font-weight: 500;
+      transition: background .15s;
+    }
+    .nav-list .nav-offerte a:hover { background: #7D3D21; color: #fff; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      border: none;
+      background: none;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 1.5px;
+      background: var(--ink); transition: .2s;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      background: #1C1713;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('demo2.jpg') center/cover no-repeat;
+      z-index: 0;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(100deg, rgba(20,16,12,.90) 0%, rgba(20,16,12,.60) 55%, rgba(20,16,12,.25) 100%);
+      z-index: 1;
+    }
+    .hero-in {
+      position: relative;
+      z-index: 2;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 80px var(--pad);
+      width: 100%;
+    }
+    .hero-kicker {
+      font-family: var(--ff-body);
+      font-size: .72rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.45);
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-family: var(--ff-head);
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 500;
+      line-height: 1.08;
+      color: #F7F3EC;
+      max-width: 600px;
+      margin-bottom: 24px;
+      letter-spacing: -.01em;
+    }
+    .hero-title em { font-style: italic; color: #D9A87A; }
+    .hero-sub {
+      font-family: var(--ff-body);
+      font-size: 1rem;
+      color: rgba(255,255,255,.6);
+      max-width: 440px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .btn-terra {
+      display: inline-block;
+      font-family: var(--ff-body);
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      background: var(--terra);
+      color: #fff;
+      padding: 13px 26px;
+      border-radius: 2px;
+      transition: background .15s;
+    }
+    .btn-terra:hover { background: #7D3D21; }
+    .hero-tel {
+      font-family: var(--ff-head);
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #F7F3EC;
+      border-bottom: 1px solid rgba(255,255,255,.25);
+      padding-bottom: 2px;
+      transition: border-color .15s, color .15s;
+    }
+    .hero-tel:hover { color: #D9A87A; border-color: #D9A87A; }
+    .hero-strip {
+      margin-top: 52px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .hero-fact {
+      font-family: var(--ff-body);
+      font-size: .72rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+    }
+    .hero-fact strong {
+      display: block;
+      font-family: var(--ff-head);
+      font-size: 1.45rem;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+      color: #F7F3EC;
+      margin-bottom: 2px;
+    }
+
+    /* ─── SHARED ─── */
+    .section { padding: 72px var(--pad); }
+    .w { max-width: var(--max); margin: 0 auto; }
+
+    .eyebrow {
+      display: block;
+      font-family: var(--ff-body);
+      font-size: .72rem;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: var(--terra);
+      margin-bottom: 14px;
+    }
+    h2.sh {
+      font-family: var(--ff-head);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 500;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 18px;
+    }
+    p.lead {
+      font-size: 1rem;
+      color: var(--mid);
+      line-height: 1.75;
+      max-width: 560px;
+    }
+    hr.rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 56px 0;
+    }
+
+    /* ─── INTRO STRIP ─── */
+    .intro-strip {
+      background: var(--ink);
+      padding: 28px var(--pad);
+    }
+    .intro-strip-in {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .intro-text {
+      font-family: var(--ff-head);
+      font-size: 1.2rem;
+      font-weight: 400;
+      font-style: italic;
+      color: #C8BDB0;
+      letter-spacing: .01em;
+    }
+    .intro-badges {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .badge-pill {
+      font-family: var(--ff-body);
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #7A6E65;
+      border: 1px solid #3A302A;
+      padding: 5px 12px;
+      border-radius: 100px;
+    }
+
+    /* ─── DIENSTEN ─── */
+    .diensten { background: var(--cream); }
+    .diensten-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--rule);
+      margin-top: 44px;
+    }
+    .dienst-item {
+      padding: 28px 32px;
+      border-bottom: 1px solid var(--rule);
+      border-right: 1px solid var(--rule);
+      transition: background .15s;
+    }
+    .dienst-item:nth-child(2n) { border-right: none; }
+    .dienst-item:nth-last-child(-n+2) { border-bottom: none; }
+    .dienst-item:hover { background: var(--linen); }
+    .dienst-num {
+      font-family: var(--ff-head);
+      font-size: .85rem;
+      color: var(--stone);
+      font-style: italic;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .dienst-name {
+      font-family: var(--ff-head);
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .dienst-desc {
+      font-size: .88rem;
+      color: var(--mid);
+      line-height: 1.65;
+    }
+
+    /* ─── OVER ONS ─── */
+    .over { background: var(--linen); }
+    .over-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .over-text p {
+      font-size: .93rem;
+      color: var(--mid);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .over-text p:last-of-type { margin-bottom: 0; }
+    .over-photo {
+      height: 480px;
+      overflow: hidden;
+    }
+    .over-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .kwaliteit-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--rule);
+      margin-top: 20px;
+    }
+    .kwaliteit-list li {
+      padding: 12px 16px;
+      font-family: var(--ff-body);
+      font-size: .855rem;
+      color: var(--earth);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      line-height: 1.5;
+    }
+    .kwaliteit-list li:last-child { border-bottom: none; }
+    .kwaliteit-list li::before {
+      content: '—';
+      color: var(--terra);
+      flex-shrink: 0;
+      font-family: var(--ff-head);
+    }
+
+    /* ─── KEURMERKEN STRIP ─── */
+    .keurmerken-strip {
+      background: var(--ink);
+      padding: 22px var(--pad);
+      border-top: 1px solid #2A2018;
+    }
+    .keurmerken-strip-in {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .keurmerken-label {
+      font-family: var(--ff-body);
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #4A4038;
+    }
+    .keurmerken-items {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .keurmerk-tag {
+      font-family: var(--ff-body);
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #A09590;
+      border: 1px solid #3A302A;
+      padding: 5px 14px;
+    }
+
+    /* ─── OFFERTE CTA ─── */
+    .offerte-cta {
+      position: relative;
+      overflow: hidden;
+      background: #1C1713;
+      padding: 64px var(--pad);
+      text-align: center;
+    }
+    .offerte-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('demo1.jpg') center 30%/cover no-repeat;
+      opacity: .18;
+    }
+    .offerte-cta > * { position: relative; z-index: 1; }
+    .offerte-cta h2.sh { color: #F7F3EC; margin: 0 auto 22px; max-width: 520px; }
+    .offerte-cta .hero-tel { display: inline-block; margin-left: 20px; vertical-align: middle; color: #F7F3EC; border-color: rgba(255,255,255,.25); }
+
+    /* ─── CONTACT ─── */
+    .contact { background: var(--cream); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .contact-card {
+      border: 1px solid var(--rule);
+      padding: 32px;
+      background: var(--linen);
+    }
+    .contact-card h3 {
+      font-family: var(--ff-head);
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 22px;
+      color: var(--ink);
+    }
+    .cinfo-row {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--rule);
+      padding: 11px 0;
+    }
+    .cinfo-row:last-child { border-bottom: none; }
+    .cinfo-label {
+      font-family: var(--ff-body);
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--faded);
+      width: 110px;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+    .cinfo-val {
+      font-size: .9rem;
+      color: var(--earth);
+      line-height: 1.6;
+    }
+    .cinfo-val a { color: var(--terra); }
+    .cinfo-val a:hover { text-decoration: underline; }
+
+    /* Form demo */
+    .form-box {
+      border: 1px solid var(--rule);
+      padding: 32px;
+      background: var(--cream);
+    }
+    .form-box h3 {
+      font-family: var(--ff-head);
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+    .form-note {
+      font-size: .82rem;
+      color: var(--faded);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+    .f-group { display: flex; flex-direction: column; gap: 5px; }
+    .f-group.full { grid-column: 1 / -1; }
+    .f-label {
+      font-family: var(--ff-body);
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--mid);
+    }
+    .f-input, .f-area {
+      font-family: var(--ff-body);
+      font-size: .9rem;
+      color: var(--mid);
+      background: var(--linen);
+      border: 1px solid var(--rule);
+      padding: 10px 13px;
+      width: 100%;
+      cursor: not-allowed;
+      opacity: .65;
+      appearance: none;
+      border-radius: 0;
+    }
+    .f-area { height: 90px; resize: none; }
+    .f-submit {
+      width: 100%;
+      font-family: var(--ff-body);
+      font-size: .8rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      background: var(--rule);
+      color: var(--mid);
+      border: none;
+      padding: 13px;
+      cursor: not-allowed;
+      margin-top: 6px;
+      border-radius: 0;
+    }
+    .form-demo-note {
+      font-size: .77rem;
+      color: var(--faded);
+      font-style: italic;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    /* ─── DEMO BANNER ─── */
+    .demo-banner {
+      background: var(--terra-l);
+      border-top: 2px solid var(--terra);
+      border-bottom: 2px solid var(--terra);
+      padding: 28px var(--pad);
+    }
+    .demo-banner-in {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .demo-icon-wrap {
+      font-family: var(--ff-head);
+      font-size: 1.4rem;
+      color: var(--terra);
+      flex-shrink: 0;
+      padding-top: 2px;
+      font-style: italic;
+    }
+    .demo-banner-title {
+      font-family: var(--ff-head);
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .demo-banner-body {
+      font-size: .875rem;
+      color: var(--mid);
+      line-height: 1.65;
+    }
+    .demo-banner-body strong { color: var(--ink); font-weight: 500; }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      background: var(--earth);
+      color: #A09590;
+    }
+    .footer-in {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px var(--pad) 32px;
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 48px;
+    }
+    .footer-brand img { height: 38px; width: auto; filter: invert(1) brightness(.55); margin-bottom: 16px; }
+    .footer-tagline { font-size: .84rem; color: #7A6E65; line-height: 1.65; }
+    .footer-col h4 {
+      font-family: var(--ff-body);
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: #5A504A;
+      margin-bottom: 14px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .footer-col ul li { font-size: .845rem; color: #7A6E65; line-height: 1.5; }
+    .footer-col ul li a { color: #7A6E65; transition: color .15s; }
+    .footer-col ul li a:hover { color: #D9A87A; }
+    .footer-bottom {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 16px var(--pad);
+      border-top: 1px solid #2A2018;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .76rem;
+      color: #4A4038;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-bottom a { color: #4A4038; transition: color .15s; }
+    .footer-bottom a:hover { color: #D9A87A; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .diensten-grid { grid-template-columns: 1fr; }
+      .dienst-item { border-right: none; }
+      .dienst-item:nth-last-child(-n+2) { border-bottom: 1px solid var(--rule); }
+      .dienst-item:last-child { border-bottom: none; }
+      .over-grid { grid-template-columns: 1fr; gap: 0; }
+      .over-photo { height: 320px; order: -1; }
+      .over-text { padding-top: 40px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-in { grid-template-columns: 1fr; gap: 32px; }
+      .keurmerken-strip-in { flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
+
+    @media (max-width: 680px) {
+      .nav-list { display: none; }
+      .hamburger { display: flex; }
+      .header-contact .header-hours { display: none; }
+      .topbar-left { display: none; }
+      .hero-title { font-size: 2.1rem; }
+      .hero-strip { gap: 24px; }
+      .hero-fact { min-width: calc(50% - 12px); }
+      .offerte-cta .hero-tel { display: block; margin: 16px auto 0; }
+      .intro-badges { display: none; }
+      .f-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="topbar-left">
+      <span>Nijverheidsweg 15, Purmerend</span>
+      <span class="topbar-dot">·</span>
+      <span>KvK 37148605</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:20px;">
+      <a href="mailto:info@jpdekoningbv.nl">info@jpdekoningbv.nl</a>
+      <a href="tel:+31299435225" class="topbar-phone">0299 – 435 225</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-in">
+    <div class="logo-wrap">
+      <a href="#"><img src="J.P.deKoningStukadoors001.png" alt="J.P. de Koning Stukadoorsbedrijf" /></a>
+    </div>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#" class="cur">Home</a></li>
+        <li><a href="#">Stucwerk</a></li>
+        <li><a href="#">Actueel</a></li>
+        <li><a href="#">Album</a></li>
+        <li><a href="#">Contact</a></li>
+        <li class="nav-offerte"><a href="#">Offerte aanvragen</a></li>
+      </ul>
+    </nav>
+    <div class="header-contact">
+      <a href="tel:+31299435225" class="header-phone">0299 – 435 225</a>
+      <span class="header-hours">Ma – Vr &nbsp; 06:00 – 17:00</span>
+    </div>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-in">
+    <p class="hero-kicker">Stukadoorsbedrijf · Purmerend · Regio Randstad</p>
+    <h1 class="hero-title">
+      Uw wanden,<br />
+      <em>vakkundig strak</em><br />
+      afgewerkt.
+    </h1>
+    <p class="hero-sub">
+      Professioneel stucwerk voor particulier en aannemer in Noord- en Zuid-Holland en Utrecht. Familiebedrijf met meer dan een eeuw vakmanschap.
+    </p>
+    <div class="hero-actions">
+      <a href="#" class="btn-terra">Vrijblijvende offerte aanvragen</a>
+      <a href="tel:+31299435225" class="hero-tel">0299 – 435 225</a>
+    </div>
+    <div class="hero-strip">
+      <div class="hero-fact">
+        <strong>1914</strong>
+        Opgericht
+      </div>
+      <div class="hero-fact">
+        <strong>4e generatie</strong>
+        Familiebedrijf
+      </div>
+      <div class="hero-fact">
+        <strong>7 vaklieden</strong>
+        Gediplomeerd
+      </div>
+      <div class="hero-fact">
+        <strong>NOA · Afbouwkeur</strong>
+        Erkend lid
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO STRIP -->
+<div class="intro-strip">
+  <div class="intro-strip-in">
+    <p class="intro-text">"Wij zijn pas klaar wanneer u tevreden bent."</p>
+    <div class="intro-badges">
+      <span class="badge-pill">NOA Lid</span>
+      <span class="badge-pill">Afbouwkeur</span>
+      <span class="badge-pill">Savantis Leerbedrijf</span>
+    </div>
+  </div>
+</div>
+
+<!-- DIENSTEN -->
+<section class="section diensten">
+  <div class="w">
+    <span class="eyebrow">Wat wij doen</span>
+    <h2 class="sh">Stucwerk voor elk project</h2>
+    <div class="diensten-grid">
+      <div class="dienst-item">
+        <span class="dienst-num">01</span>
+        <div class="dienst-name">Traditioneel stukadoorswerk</div>
+      </div>
+      <div class="dienst-item">
+        <span class="dienst-num">02</span>
+        <div class="dienst-name">Plafonds pleisteren &amp; lijstwerk</div>
+      </div>
+      <div class="dienst-item">
+        <span class="dienst-num">03</span>
+        <div class="dienst-name">Sierpleisterwerk</div>
+      </div>
+      <div class="dienst-item">
+        <span class="dienst-num">04</span>
+        <div class="dienst-name">Wanden pleisteren</div>
+      </div>
+      <div class="dienst-item">
+        <span class="dienst-num">05</span>
+        <div class="dienst-name">Buitengevel restauratie &amp; isolatie</div>
+      </div>
+      <div class="dienst-item">
+        <span class="dienst-num">06</span>
+        <div class="dienst-name">Vloeren</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVER ONS -->
+<section class="section over">
+  <div class="w">
+    <div class="over-grid">
+      <div class="over-text">
+        <span class="eyebrow">Over J.P. de Koning</span>
+        <h2 class="sh">Vier generaties<br /><em>vakmanschap</em></h2>
+        <p>Opgericht in 1914, inmiddels in de vierde generatie. Edwin en Coen de Koning staan samen aan het hoofd van dit familiebedrijf in Purmerend — met zeven gediplomeerde vaklieden actief in Noord-Holland, Zuid-Holland en Utrecht.</p>
+        <ul class="kwaliteit-list">
+          <li>Duidelijke afspraken, altijd nagekomen</li>
+          <li>Vakkundig, vriendelijk en netjes</li>
+          <li>Klaar als u tevreden bent</li>
+          <li>Gratis offerte aan huis</li>
+        </ul>
+        <a href="#" class="btn-terra" style="margin-top:24px;display:inline-block;">Neem contact op</a>
+      </div>
+      <div class="over-photo">
+        <img src="demo1.jpg" alt="Stucwerk badkamer door J.P. de Koning" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEURMERKEN STRIP -->
+<div class="keurmerken-strip">
+  <div class="keurmerken-strip-in">
+    <span class="keurmerken-label">Erkend &amp; gecertificeerd</span>
+    <div class="keurmerken-items">
+      <span class="keurmerk-tag">NOA Lid</span>
+      <span class="keurmerk-tag">Afbouwkeur</span>
+      <span class="keurmerk-tag">Savantis Leerbedrijf</span>
+      <span class="keurmerk-tag">Opgericht 1914</span>
+    </div>
+  </div>
+</div>
+
+<!-- OFFERTE CTA -->
+<section class="offerte-cta">
+  <div class="w">
+    <h2 class="sh">Vraag een vrijblijvende offerte aan</h2>
+    <a href="#" class="btn-terra">Offerte aanvragen</a>
+    <a href="tel:+31299435225" class="hero-tel" style="font-size:1.1rem;">0299 – 435 225</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact">
+  <div class="w">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow">Contact</span>
+        <h2 class="sh" style="margin-bottom:28px;">Zo vindt u ons</h2>
+        <div class="contact-card">
+          <h3>J.P. de Koning Stukadoorsbedrijf</h3>
+          <div class="cinfo-row">
+            <span class="cinfo-label">Adres</span>
+            <span class="cinfo-val">Nijverheidsweg 15<br />1442LD Purmerend</span>
+          </div>
+          <div class="cinfo-row">
+            <span class="cinfo-label">Telefoon</span>
+            <span class="cinfo-val"><a href="tel:+31299435225">0299 – 435 225</a></span>
+          </div>
+          <div class="cinfo-row">
+            <span class="cinfo-label">E-mail</span>
+            <span class="cinfo-val"><a href="mailto:info@jpdekoningbv.nl">info@jpdekoningbv.nl</a></span>
+          </div>
+          <div class="cinfo-row">
+            <span class="cinfo-label">Openingstijden</span>
+            <span class="cinfo-val">
+              Maandag t/m vrijdag<br />
+              06:00 – 17:00 uur
+            </span>
+          </div>
+          <div class="cinfo-row">
+            <span class="cinfo-label">KvK</span>
+            <span class="cinfo-val">37148605</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Contactformulier</span>
+        <h2 class="sh" style="margin-bottom:28px;">Stuur ons een bericht</h2>
+        <div class="form-box">
+          <p class="form-note" style="margin-bottom:20px;">Wij reageren binnen één werkdag.</p>
+          <div class="f-row">
+            <div class="f-group">
+              <label class="f-label">Naam *</label>
+              <input class="f-input" type="text" placeholder="Uw naam" disabled />
+            </div>
+            <div class="f-group">
+              <label class="f-label">Telefoonnummer</label>
+              <input class="f-input" type="tel" placeholder="06 – ..." disabled />
+            </div>
+            <div class="f-group full">
+              <label class="f-label">E-mailadres *</label>
+              <input class="f-input" type="email" placeholder="uw@email.nl" disabled />
+            </div>
+            <div class="f-group full">
+              <label class="f-label">Uw bericht *</label>
+              <textarea class="f-area" placeholder="Beschrijf uw project, wensen of vraag..." disabled></textarea>
+            </div>
+          </div>
+          <button class="f-submit" disabled>Bericht verzenden</button>
+          <p class="form-demo-note">Formulier beschikbaar in de volledige versie.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner">
+  <div class="demo-banner-in">
+    <div class="demo-icon-wrap">Demo</div>
+    <div>
+      <div class="demo-banner-title">Dit is een gratis demo op basis van uw huidige website</div>
+      <div class="demo-banner-body">
+        De <strong>volledige versie</strong> — inclusief alle subpagina's (Stucwerk, Actueel, Album, Contact), een werkend contactformulier, <strong>Google-optimalisatie</strong> (lokale SEO), volledige mobielvriendelijkheid en snellere laadtijden — wordt opgeleverd na akkoord. <strong>Interesse? Neem contact op.</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-in">
+    <div class="footer-brand">
+      <img src="J.P.deKoningStukadoors001.png" alt="J.P. de Koning Stukadoorsbedrijf" />
+      <p class="footer-tagline">Familiebedrijf sinds 1914. Stucwerk in Noord- en Zuid-Holland en Utrecht.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigatie</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Stucwerk</a></li>
+        <li><a href="#">Actueel</a></li>
+        <li><a href="#">Album</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>Nijverheidsweg 15</li>
+        <li>1442LD Purmerend</li>
+        <li><a href="tel:+31299435225">0299 – 435 225</a></li>
+        <li><a href="mailto:info@jpdekoningbv.nl">info@jpdekoningbv.nl</a></li>
+        <li style="margin-top:6px;color:#4A4038;">Ma – Vr · 06:00 – 17:00</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 J.P. de Koning Stukadoorsbedrijf &nbsp;·&nbsp; KvK 37148605</span>
+    <div style="display:flex;gap:20px;">
+      <a href="#">Privacyverklaring</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const ham = document.querySelector('.hamburger');
+  const nav = document.querySelector('.nav-list');
+  if (ham && nav) {
+    ham.addEventListener('click', () => {
+      const open = nav.style.display === 'flex';
+      if (open) {
+        nav.removeAttribute('style');
+      } else {
+        Object.assign(nav.style, {
+          display:'flex', flexDirection:'column', position:'absolute',
+          top:'76px', left:'0', right:'0', background:'var(--cream)',
+          padding:'12px 0', borderBottom:'1px solid var(--rule)', zIndex:'99',
+          gap:'0'
+        });
+        nav.querySelectorAll('a').forEach(a => {
+          a.style.padding = '12px 24px';
+          a.style.display = 'block';
+        });
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
